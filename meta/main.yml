@@ -4,6 +4,11 @@ galaxy_info:
   description: Ansible Role to deploy Cloudflare's Origin Pull certificate
   license: MIT
   min_ansible_version: 2.4
+  platforms:
+    - name: Ubuntu
+      versions:
+        - bionic
+        - xenial
   galaxy_tags:
     - cloudflare
     - ssl
