@@ -1,0 +1,9 @@
+---
+# All variables specific to this role are prefixed with cfpull_
+cfpull_task_prefix: "=== CLOUDFLARE ORIGIN PULL CA ==="
+# Directory where certificates are installed on target host
+cfpull_path_dir: "/etc/ssl/cloudflare"
+# Cloudflare's Origin Pull Certificate
+# See https://support.cloudflare.com/hc/en-us/articles/204899617#section6
+cfpull_file: "origin-pull-ca.pem"
+cfpull_extra_certs: []

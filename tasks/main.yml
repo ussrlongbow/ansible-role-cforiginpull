@@ -1,0 +1,14 @@
+---
+- name: "{{ cfpull_task_prefix }} Create directory"
+  file:
+    dest: "{{ cfpull_path_dir }}"
+    state: directory
+- name: "{{ cfpull_task_prefix }} Copy origin pull certificate"
+  copy:
+    src: "{{ cfpull_file }}"
+    dest: "{{ cfpull_path_dir }}/"
+- name: "{{ cfpull_task_prefix }} Copy extra certs"
+  copy:
+    src: "{{ item }}"
+    dest: "{{ cfpull_path_dir }}/"
+  loop: "{{ cfpull_extra_certs }}"
